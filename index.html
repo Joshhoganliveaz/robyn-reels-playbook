@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Reels Playbook — Robyn Gabrielson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-muted: #7a7a7a;
+    --bg-white: #ffffff;
+    --bg-light: #f8f7f5;
+    --bg-card: #fafaf8;
+    --border: #e8e6e1;
+    --accent: #2c5f3f;
+    --accent-light: #e8f0eb;
+    --tier1: #2c5f3f;
+    --tier1-bg: #e8f0eb;
+    --tier2: #5a4a3a;
+    --tier2-bg: #f3efe8;
+    --highlight: #d4a843;
+    --highlight-bg: #fdf8ed;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+    background: var(--bg-white);
+    line-height: 1.6;
+    font-size: 14px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @media print {
+    body { font-size: 11px; }
+    .page-break { page-break-before: always; }
+    .no-print { display: none; }
+    .container { max-width: 100%; padding: 0; }
+    section { padding: 24px 0; }
+    .recipe-card { break-inside: avoid; }
+    .data-table { break-inside: avoid; }
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 32px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 2px solid var(--text-primary);
+    margin-bottom: 40px;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .header .meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Section headers */
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 24px;
+  }
+
+  h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    margin-top: 16px;
+  }
+
+  p {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+  }
+
+  section {
+    padding: 32px 0;
+  }
+
+  /* Core concept box */
+  .core-concept {
+    background: var(--bg-light);
+    border-left: 4px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .core-concept p {
+    color: var(--text-primary);
+    font-weight: 400;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .core-concept strong {
+    color: var(--accent);
+  }
+
+  /* Tier badges */
+  .tier-label {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .tier-1 {
+    background: var(--tier1-bg);
+    color: var(--tier1);
+  }
+
+  .tier-2 {
+    background: var(--tier2-bg);
+    color: var(--tier2);
+  }
+
+  /* Recipe cards */
+  .recipe-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 20px 0;
+    background: var(--bg-white);
+  }
+
+  .recipe-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .recipe-card .card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .recipe-card .card-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .recipe-card .edit-time {
+    background: var(--highlight-bg);
+    color: var(--tier2);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .recipe-card .why-box {
+    background: var(--bg-light);
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  /* Shot list */
+  .shot-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 16px 0;
+  }
+
+  .shot-list li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 13px;
+    border-bottom: 1px solid #f0eeea;
+  }
+
+  .shot-list li:last-child { border-bottom: none; }
+
+  .shot-list li::before {
+    content: attr(data-num);
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 7px;
+  }
+
+  /* Hook variations */
+  .hook-variations {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 12px;
+  }
+
+  .hook-variations li {
+    padding: 3px 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+
+  .hook-variations li::before {
+    content: '"';
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .hook-variations li::after {
+    content: '"';
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Script timeline */
+  .script-timeline {
+    background: var(--bg-card);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 8px 0 16px;
+  }
+
+  .script-line {
+    display: flex;
+    gap: 12px;
+    padding: 4px 0;
+    font-size: 13px;
+  }
+
+  .script-time {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 12px;
+    min-width: 36px;
+    font-family: 'Inter', monospace;
+  }
+
+  .script-text {
+    color: var(--text-secondary);
+  }
+
+  /* Field labels */
+  .field {
+    margin-bottom: 12px;
+  }
+
+  .field-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .field-value {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  /* Caption template box */
+  .caption-box {
+    background: var(--highlight-bg);
+    border: 1px solid #e8dfc4;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  /* Workflow section */
+  .workflow-step {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .workflow-step:last-child { border-bottom: none; }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    margin-top: 0;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+
+  .step-content p {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .step-time {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+
+  .checklist li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 4px;
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  /* Data tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 8px 12px;
+    background: var(--bg-light);
+    border-bottom: 2px solid var(--border);
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  .data-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* Cadence grid */
+  .cadence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .cadence-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .cadence-item .number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .cadence-item .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* Filming protocol */
+  .filming-timeline {
+    position: relative;
+    padding-left: 24px;
+    margin: 16px 0;
+  }
+
+  .filming-timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .filming-phase {
+    position: relative;
+    padding: 12px 0 12px 20px;
+  }
+
+  .filming-phase::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .filming-phase .phase-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+
+  .filming-phase .phase-time {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .filming-phase p {
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  /* Rules list */
+  .rules-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+  }
+
+  .rules-list li {
+    padding: 4px 0 4px 20px;
+    position: relative;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .rules-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Metrics */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  .metric-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .metric-card h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .metric-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .metric-card ul li {
+    font-size: 13px;
+    padding: 3px 0;
+    color: var(--text-secondary);
+  }
+
+  .do-not-track {
+    background: #fdf2f2;
+    border: 1px solid #e8c4c4;
+  }
+
+  .do-not-track h4 {
+    color: #8a3a3a;
+  }
+
+  /* Resources table */
+  .resource-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .resource-item:last-child { border-bottom: none; }
+
+  .resource-title {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text-primary);
+  }
+
+  .resource-detail {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .resource-why {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+  }
+
+  /* Print button */
+  .print-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--text-primary);
+    padding: 12px 24px;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .print-bar button {
+    background: var(--bg-white);
+    color: var(--text-primary);
+    border: none;
+    padding: 10px 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .print-bar button:hover {
+    background: var(--bg-light);
+  }
+
+  /* Bottom padding for print bar */
+  .container { padding-bottom: 80px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Instagram Reels Playbook</h1>
+    <div class="subtitle">A template-based system for consistent, high-engagement content</div>
+    <div class="meta">Prepared for Robyn Gabrielson &nbsp;·&nbsp; April 2026</div>
+  </div>
+
+  <!-- CORE CONCEPT -->
+  <div class="core-concept">
+    <p>The bottleneck isn't filming or ideas. It's that <strong>every Reel requires too many decisions</strong>. This playbook collapses those decisions to near-zero through rigid templates, ranked by what the data shows actually works at your audience size. Pick a template, follow the recipe, post.</p>
+  </div>
+
+  <!-- WEEKLY CADENCE -->
+  <section>
+    <h2>Weekly Cadence</h2>
+    <div class="cadence-grid">
+      <div class="cadence-item">
+        <div class="number">3</div>
+        <div class="label">Reels / Week</div>
+      </div>
+      <div class="cadence-item">
+        <div class="number">1-2</div>
+        <div class="label">Home Visits / Week</div>
+      </div>
+      <div class="cadence-item">
+        <div class="number">~45</div>
+        <div class="label">Minutes Editing / Week</div>
+      </div>
+    </div>
+    <p style="text-align: center; font-size: 13px;">2 Tier 1 Reels (high engagement) + 1 Tier 2 Reel (brand building) = 3 per week</p>
+  </section>
+
+  <!-- TIER 1 TEMPLATES -->
+  <section>
+    <h2>Reel Templates</h2>
+    <span class="tier-label tier-1">Tier 1 — High Engagement — Post 2-3x/week</span>
+
+    <!-- Template 1 -->
+    <div class="recipe-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">#1 — "Would You Pick This Home?"</div>
+          <div class="card-subtitle">Engagement Bait</div>
+        </div>
+        <div class="edit-time">~8 min edit</div>
+      </div>
+
+      <div class="why-box">
+        Your own "which one would you choose?" Reel got 6x more comments than educational content. Questions in the hook are the strongest driver for algorithm reach at smaller account sizes.
+      </div>
+
+      <h4>Hook (first 1-3 seconds)</h4>
+      <ul class="hook-variations">
+        <li>This home is $1.1M in Scottsdale. Would you change anything?</li>
+        <li>Rate this kitchen 1-10</li>
+        <li>Would you keep this or renovate?</li>
+        <li>Dream home or pass?</li>
+        <li>Pick your favorite room</li>
+      </ul>
+
+      <h4>Shot List (film in this order)</h4>
+      <ol class="shot-list">
+        <li data-num="1">Wide entry or establishing shot — hold 8-10 sec, trim to 4</li>
+        <li data-num="2">Kitchen or main living area — hold 8-10 sec</li>
+        <li data-num="3">Primary suite or bathroom — hold 8-10 sec</li>
+        <li data-num="4">Best unique feature: pool, view, fireplace — hold 8-10 sec</li>
+        <li data-num="5">Hook shot: the most striking single frame — film last, use as opener</li>
+      </ol>
+
+      <h4>Script / Text Overlay</h4>
+      <div class="script-timeline">
+        <div class="script-line"><span class="script-time">0:00</span><span class="script-text">"This $___K home in ______"</span></div>
+        <div class="script-line"><span class="script-time">0:04</span><span class="script-text">Price + key specs (beds / baths / sqft)</span></div>
+        <div class="script-line"><span class="script-time">End</span><span class="script-text">"Tell me in the comments"</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Audio</div>
+        <div class="field-value">Trending audio from CapCut. No voiceover.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Tone</div>
+        <div class="field-value">Let the house speak. Minimal text. The question does the work.</div>
+      </div>
+
+      <h4>Caption Template</h4>
+      <div class="caption-box">
+        This $___K home in ______ has me questioning everything. Would you change anything? Tell me below.<br><br>
+        #ScottsdaleRealEstate #GilbertAZ #DreamHome #AZHomes #HouseHunting
+      </div>
+    </div>
+
+    <!-- Template 2 -->
+    <div class="recipe-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">#2 — "Walk With Me"</div>
+          <div class="card-subtitle">Neighborhood / Lifestyle</div>
+        </div>
+        <div class="edit-time">~12 min edit</div>
+      </div>
+
+      <div class="why-box">
+        Your neighborhood walk Reel outperformed all other content. This is where personality shows. At your follower count, being someone viewers want to follow matters more than showcasing a property.
+      </div>
+
+      <h4>Hook (first 1-3 seconds)</h4>
+      <ul class="hook-variations">
+        <li>Come walk this Scottsdale neighborhood with me</li>
+        <li>POV: house hunting in Gilbert</li>
+        <li>I found something cool on my walk today</li>
+        <li>This is the neighborhood everyone asks me about</li>
+      </ul>
+
+      <h4>Shot List (film in this order)</h4>
+      <ol class="shot-list">
+        <li data-num="1">Walking shot, camera following from behind or beside — 10 sec</li>
+        <li data-num="2">Interesting home exterior or architectural detail — 8 sec</li>
+        <li data-num="3">Local spot: coffee shop, park entrance, street scene — 8 sec</li>
+        <li data-num="4">Second home or neighborhood feature — 8 sec</li>
+        <li data-num="5">Sunset, mountain view, or wide neighborhood shot — 8 sec</li>
+      </ol>
+
+      <h4>Script</h4>
+      <div class="field">
+        <div class="field-value">Casual narration while walking. "I love this street because..." / "This is the kind of neighborhood where..." Keep it conversational, like talking to a friend on FaceTime.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Audio</div>
+        <div class="field-value">Soft music underneath voice</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Tone</div>
+        <div class="field-value">Natural, curious, enthusiastic without being performative. This is the "I want to work with her" content.</div>
+      </div>
+
+      <h4>Caption Template</h4>
+      <div class="caption-box">
+        Took a walk through ______ and fell in love with the vibe. Which house caught your eye?<br><br>
+        #WalkWithMe #AZRealEstate #ScottsdaleLife #GilbertAZ
+      </div>
+    </div>
+
+    <!-- Template 3 -->
+    <div class="recipe-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">#3 — "Three Things I Love"</div>
+          <div class="card-subtitle">Quick Hit</div>
+        </div>
+        <div class="edit-time">~8 min edit</div>
+      </div>
+
+      <div class="why-box">
+        Short, punchy, lowest effort. 15-20 second Reels get the highest completion rates, and the algorithm rewards completion over watch time at smaller account sizes. This is the fastest template to film and edit.
+      </div>
+
+      <h4>Hook (first 1-3 seconds)</h4>
+      <ul class="hook-variations">
+        <li>Three things I love about this $950K home</li>
+        <li>Three features you won't believe at this price</li>
+        <li>Three reasons this home won't last</li>
+      </ul>
+
+      <h4>Shot List (film in this order)</h4>
+      <ol class="shot-list">
+        <li data-num="1">Feature #1 — close-up detail shot — hold 8 sec, trim to 4</li>
+        <li data-num="2">Feature #2 — close-up detail shot — hold 8 sec, trim to 4</li>
+        <li data-num="3">Feature #3 — close-up detail shot — hold 8 sec, trim to 4</li>
+        <li data-num="4">Hook shot: holding up three fingers or pointing at camera — film last</li>
+      </ol>
+
+      <h4>Script</h4>
+      <div class="field">
+        <div class="field-value">One sentence per thing. Observational, not salesy. "This kitchen island could seat eight." / "The primary closet has better lighting than most bathrooms." / "And this backyard at this price point?"</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Audio</div>
+        <div class="field-value">Trending audio, fast cuts aligned to beats</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Tone</div>
+        <div class="field-value">Excited but specific. Name what makes it good. No generic superlatives.</div>
+      </div>
+
+      <h4>Caption Template</h4>
+      <div class="caption-box">
+        Three things that made my jaw drop at this $___K listing in ______. Which one's your favorite?<br><br>
+        #ThreeThingsILove #AZRealEstate #ScottsdaleHomes #GilbertHomes #LuxuryLiving
+      </div>
+    </div>
+  </section>
+
+  <!-- TIER 2 TEMPLATES -->
+  <section class="page-break">
+    <span class="tier-label tier-2">Tier 2 — Brand Building — Post 1-2x/week, rotate</span>
+
+    <!-- Template 4 -->
+    <div class="recipe-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">#4 — "Day in the Life"</div>
+          <div class="card-subtitle">Behind the Scenes</div>
+        </div>
+        <div class="edit-time">~12 min edit</div>
+      </div>
+
+      <div class="why-box">
+        Builds the "know, like, trust" factor that converts followers to clients over 6 months. Harder to batch-film, so it's supplemental. Film passively throughout the day; don't stage it.
+      </div>
+
+      <h4>Hook Options</h4>
+      <ul class="hook-variations">
+        <li>What showing a $1M home actually looks like</li>
+        <li>The part of real estate no one talks about</li>
+        <li>A day in my life as a Scottsdale agent</li>
+      </ul>
+
+      <h4>Shot List</h4>
+      <ol class="shot-list">
+        <li data-num="1">Morning routine or getting ready — 5 sec</li>
+        <li data-num="2">Driving to showing or walking up to a home — 5 sec</li>
+        <li data-num="3">Inside the home, one wow moment — 5 sec</li>
+        <li data-num="4">Real reaction or candid moment — 5 sec</li>
+        <li data-num="5">End of day or wrap-up — 5 sec</li>
+      </ol>
+
+      <div class="field">
+        <div class="field-label">Script</div>
+        <div class="field-value">Casual voiceover added after, or real-time narration. Show the unglamorous parts too.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Audio</div>
+        <div class="field-value">Light background music under voice</div>
+      </div>
+    </div>
+
+    <!-- Template 5 -->
+    <div class="recipe-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">#5 — "The Reveal"</div>
+          <div class="card-subtitle">Cinematic Tour</div>
+        </div>
+        <div class="edit-time">~10 min edit</div>
+      </div>
+
+      <div class="why-box">
+        Polished silent walkthroughs consistently get the lowest engagement even at 200K+ followers. Beautiful but doesn't drive comments. Use only for the absolute best homes or portfolio pieces. This is the template worth outsourcing for extra polish.
+      </div>
+
+      <h4>Hook Options</h4>
+      <ul class="hook-variations">
+        <li>Wait for it...</li>
+        <li>This $1.2M Scottsdale home surprised me</li>
+      </ul>
+
+      <h4>Shot List</h4>
+      <ol class="shot-list">
+        <li data-num="1">Extreme close-up detail (faucet, countertop, fireplace) — hold 10 sec, trim to 3</li>
+        <li data-num="2">Slow pull-back to reveal the room — hold 10 sec, trim to 5</li>
+        <li data-num="3">Walking transition to next best room — hold 10 sec, trim to 4</li>
+        <li data-num="4">Wide shot of best feature (pool, view, exterior) — hold 10 sec, trim to 5</li>
+      </ol>
+
+      <div class="field">
+        <div class="field-label">Script</div>
+        <div class="field-value">No talking. Text overlays only, timed to transitions. 3-4 short lines max.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Audio</div>
+        <div class="field-value">Moody, slow-build instrumental. Cut transitions to beat drops.</div>
+      </div>
+    </div>
+
+    <!-- Template 6 -->
+    <div class="recipe-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">#6 — "Market Take"</div>
+          <div class="card-subtitle">Hot Take / Opinion</div>
+        </div>
+        <div class="edit-time">~10 min edit</div>
+      </div>
+
+      <div class="why-box">
+        Educational content without opinion gets low engagement. Tie your take to a specific home or neighborhood. One point, strong stance, 15-20 seconds. Opinionated content builds authority.
+      </div>
+
+      <h4>Hook Options</h4>
+      <ul class="hook-variations">
+        <li>Unpopular opinion about Scottsdale real estate</li>
+        <li>The biggest mistake I see buyers making at $1M</li>
+        <li>Nobody talks about this in Gilbert real estate</li>
+      </ul>
+
+      <h4>Shot List</h4>
+      <ol class="shot-list">
+        <li data-num="1">Talking to camera, inside a listing as backdrop — 15-20 sec total</li>
+        <li data-num="2">Optional: B-roll of the home over voiceover</li>
+      </ol>
+
+      <div class="field">
+        <div class="field-label">Script</div>
+        <div class="field-value">One point. Strong stance. "Here's what I think..." End with "Agree or disagree?" or "Am I wrong?"</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Audio</div>
+        <div class="field-value">Optional, low background music</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BATCH FILMING -->
+  <section class="page-break">
+    <h2>Batch Filming Protocol</h2>
+    <p>Walk into a vacant home once, walk out with 2-3 Reels of raw footage in under 30 minutes.</p>
+
+    <h3>Before Arriving</h3>
+    <p>Pick 2-3 recipe cards that fit this home. Pull up the shot lists on your phone. Not every template fits every home.</p>
+
+    <h3>At the Property</h3>
+    <div class="filming-timeline">
+      <div class="filming-phase">
+        <div class="phase-title">Scout</div>
+        <div class="phase-time">5 minutes</div>
+        <p>Walk through without filming. Identify the 3-4 strongest features and any conversation-starter elements (bold paint, unusual layout, amazing view).</p>
+      </div>
+      <div class="filming-phase">
+        <div class="phase-title">Film in Template Order</div>
+        <div class="phase-time">15-20 minutes</div>
+        <p>Shoot all clips for Template A, then all clips for Template B, then C. Do NOT interleave. Each template's clips will be grouped on your camera roll in editing order.</p>
+      </div>
+      <div class="filming-phase">
+        <div class="phase-title">Story Content</div>
+        <div class="phase-time">3 minutes</div>
+        <p>Grab 3-4 casual clips for Stories. No gimbal needed. Point at something interesting, say one sentence, post raw. Use poll or question stickers.</p>
+      </div>
+    </div>
+
+    <h3>Filming Rules</h3>
+    <ul class="rules-list">
+      <li>Hold each shot 8-10 seconds even though the final clip will be 3-5 seconds. Gives editing room.</li>
+      <li>Film the hook shot last. You'll know the best angle after walking the house.</li>
+      <li>If talking, 2 takes max. First take is usually the most natural. Don't chase perfection.</li>
+      <li>Gimbal on for walking shots. Handheld is fine for static detail shots.</li>
+    </ul>
+
+    <h3>After Leaving</h3>
+    <ul class="rules-list">
+      <li>Clips are already grouped by template on camera roll</li>
+      <li>Edit within 24 hours while the home is fresh</li>
+      <li>Stay 1-2 Reels ahead to remove "I need to post today" pressure</li>
+    </ul>
+  </section>
+
+  <!-- EDITING WORKFLOW -->
+  <section class="page-break">
+    <h2>Editing Workflow (CapCut)</h2>
+
+    <h3>One-Time Setup</h3>
+    <p>Do this once. It eliminates the micro-decisions that make editing feel slow.</p>
+    <ul class="checklist">
+      <li>Create a CapCut project template for each recipe card you use</li>
+      <li>Pre-set 9:16 aspect ratio in each template</li>
+      <li>Save your go-to font, size, color, and position for text overlays</li>
+      <li>Save 3-4 music tracks per template mood (moody, upbeat, trending)</li>
+      <li>Set auto-captions to your preferred style</li>
+    </ul>
+
+    <h3>Per-Reel Edit Sequence</h3>
+    <div class="workflow-step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h4>Import + Assemble</h4>
+        <div class="step-time">5 minutes</div>
+        <p>Import clips (already in order from filming). Drop on timeline in sequence. Trim each clip to the target duration from the recipe card.</p>
+      </div>
+    </div>
+    <div class="workflow-step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h4>Layer</h4>
+        <div class="step-time">5 minutes</div>
+        <p>Add text overlays (copy from recipe card). Drop in saved music track. Auto-generate captions, fix any misreadings. Align cuts to beats if applicable.</p>
+      </div>
+    </div>
+    <div class="workflow-step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h4>Export + Post</h4>
+        <div class="step-time">3 minutes</div>
+        <p>Export at highest quality. Post or save to camera roll. Copy/paste caption template, fill in the blanks. Add to Story with engagement sticker (poll, question, slider).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTING CHECKLIST -->
+  <section>
+    <h2>Posting Checklist</h2>
+    <ul class="checklist">
+      <li>Pick the most visually striking frame as cover image</li>
+      <li>Write caption from template, fill in blanks</li>
+      <li>Add 5-8 hashtags (mix local + category)</li>
+      <li>Share to Story with poll, question, or slider sticker</li>
+      <li>Reply to first 3-5 comments within 30 minutes (algorithm boost)</li>
+      <li>Engage with 5-10 other local accounts' posts (reciprocity)</li>
+    </ul>
+  </section>
+
+  <!-- 90-DAY METRICS -->
+  <section class="page-break">
+    <h2>90-Day Success Metrics</h2>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <h4>Track Weekly</h4>
+        <ul>
+          <li>☐ Reels posted (target: 3)</li>
+          <li>☐ Homes visited (target: 1-2)</li>
+          <li>☐ Time spent editing (target: under 45 min)</li>
+        </ul>
+      </div>
+      <div class="metric-card">
+        <h4>Track Monthly</h4>
+        <ul>
+          <li>☐ Total Reels posted (target: 12)</li>
+          <li>☐ Average comments per Reel</li>
+          <li>☐ DMs received from content</li>
+          <li>☐ Profile visits trend</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card do-not-track" style="grid-column: 1 / -1;">
+        <h4>Do NOT Track (First 90 Days)</h4>
+        <ul>
+          <li>✗ Follower count — vanity metric, lags engagement by months</li>
+          <li>✗ Views per Reel — volatile, algorithm-dependent, discouraging early on</li>
+          <li>✗ Comparison to larger accounts — different game entirely</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA INSIGHTS -->
+  <section>
+    <h2>Why These Templates (The Data)</h2>
+
+    <h3>Your Recent Reels</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Reel</th><th>Date</th><th>Comments</th><th>Format</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Deferred Maintenance</td><td>Jan 28</td><td>2</td><td>Educational, talking head</td></tr>
+        <tr><td>Neighborhood Walk</td><td>Feb 4</td><td>12</td><td>Walking, engagement question</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Takeaway:</strong> Engagement questions drove 6x more comments than educational content.</p>
+
+    <h3>Large Account Patterns</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Format</th><th>Account</th><th>Engagement</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Personality / humor</td><td>Ryan Serhant</td><td>219K-1.2M likes</td></tr>
+        <tr><td>Creative / unexpected</td><td>Josh Altman (AI video)</td><td>96K likes</td></tr>
+        <tr><td>Listing tours (standard)</td><td>Serhant</td><td>10K-70K likes</td></tr>
+        <tr><td>Polished walkthroughs</td><td>Altman Brothers</td><td>46-187 likes</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Takeaway:</strong> At every scale, personality + engagement hooks outperform polished walkthroughs. Production value is not a substitute for format strategy.</p>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="page-break">
+    <h2>YouTube Resources</h2>
+    <p>Watch these for deeper strategy. Prioritized by relevance to this playbook.</p>
+
+    <div class="resource-item">
+      <div class="resource-title">How to Film VIRAL Real Estate Videos WITH YOUR PHONE</div>
+      <div class="resource-detail">Realtor Content Academy · 16 min · 8.47x engagement ratio</div>
+      <div class="resource-why">Phone filming techniques that outperformed most professional content</div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-title">How to Create VIRAL HOOKS for Real Estate Videos</div>
+      <div class="resource-detail">Realtor Content Academy · 6 min</div>
+      <div class="resource-why">Hook writing specifically for RE Reels</div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-title">Filming Real Estate Videos is on EASY MODE</div>
+      <div class="resource-detail">James Bottomley · 9 min · 84K views</div>
+      <div class="resource-why">Simplified filming workflow, validates the "less production, more consistency" approach</div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-title">Instagram for Realtors 2026: Copy This EXACT System</div>
+      <div class="resource-detail">Mike Sherrard · 34 min</div>
+      <div class="resource-why">Most comprehensive system for consistent posting</div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-title">Social Media Has Changed Forever (NEW 2026 Strategy)</div>
+      <div class="resource-detail">Mike Sherrard · 31 min · 34K views</div>
+      <div class="resource-why">Updated algorithm strategy</div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-title">Create RE Tours in MINUTES with Instagram's Edits App</div>
+      <div class="resource-detail">Cory Malveaux · 18 min</div>
+      <div class="resource-why">Alternative to CapCut using Instagram's native editor</div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-title">How to EDIT Videos 10x FASTER Using AI (Descript)</div>
+      <div class="resource-detail">Learn Online Video · 10 min · 179K views</div>
+      <div class="resource-why">AI editing option if CapCut feels limiting later</div>
+    </div>
+  </section>
+
+  <!-- OUTSOURCE REFERENCE -->
+  <section>
+    <h2>Outsource Reference (When Needed)</h2>
+    <p>Use when you're slammed or want cinematic polish on a "Reveal" template.</p>
+
+    <h4>What to Send an Editor</h4>
+    <ul class="rules-list">
+      <li>Raw clips (upload to shared Google Drive or Dropbox folder)</li>
+      <li>The recipe card for the template you want</li>
+      <li>One line of direction: "Use Template #5, this is the $1.1M home on Scottsdale Rd"</li>
+    </ul>
+
+    <h4>Where to Find Editors</h4>
+    <table class="data-table">
+      <thead>
+        <tr><th>Source</th><th>Cost</th><th>Best For</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fiverr</td><td>$15-75 / Reel</td><td>Per-Reel when you need fast turnaround</td></tr>
+        <tr><td>Local videographer</td><td>$50-100 / Reel</td><td>Learns your style, less direction over time</td></tr>
+        <tr><td>RE Virtual Assistant</td><td>$300-500 / mo</td><td>Editing + admin tasks bundled</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+<!-- Print button -->
+<div class="print-bar no-print">
+  <button onclick="window.print()">Save as PDF</button>
+</div>
+
+</body>
+</html>
